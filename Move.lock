@@ -4,50 +4,38 @@
 [move]
 version = 4
 
-[pinned.testnet.CetusClmm]
-source = { git = "https://github.com/CetusProtocol/cetus-contracts.git", subdir = "packages/cetus_clmm", rev = "9b0405fd7468115e8da04801b40792705858500c" }
-use_environment = "testnet"
-manifest_digest = "019F7ACB141636C0C12E2E0C44D9ACB51A5F1B9A72842D9BFEE02A8345AA3B8B"
+[pinned.mainnet.CetusClmm]
+source = { git = "https://github.com/CetusProtocol/cetus-contracts.git", subdir = "packages/cetus_clmm", rev = "a31283dd9e29d2b367f76d670ba704a2501de364" }
+use_environment = "mainnet"
+manifest_digest = "1E932E9C4C15B3E671C5AACEE3107A26421CD5F431977EB48BE64EF5BE1AD9CA"
 deps = { IntegerMate = "IntegerMate", MoveSTL = "MoveSTL", std = "MoveStdlib", sui = "Sui" }
 
-[pinned.testnet.IntegerMate]
-source = { git = "https://github.com/CetusProtocol/integer-mate.git", subdir = "sui", rev = "3b8e0d46a7d7f69d6567d677e13c51325fe2a8ed" }
-use_environment = "testnet"
-manifest_digest = "A3AAD8ED30FCD8C2C22818625110622FF723636ECF9C45BC9DAA4C5F84FB8B7C"
-deps = { Sui = "Sui_1" }
+[pinned.mainnet.IntegerMate]
+source = { git = "https://github.com/CetusProtocol/integer-mate.git", subdir = ".", rev = "09a12d9b171122883d9350039d4ed6e8400033b9" }
+use_environment = "mainnet"
+manifest_digest = "E41BBD67BE8940D26C79D78B028477EF5B33BA217A1282C78ACB344CF8A5ECF6"
+deps = { std = "MoveStdlib", sui = "Sui" }
 
-[pinned.testnet.MoveSTL]
-source = { git = "https://github.com/CetusProtocol/move-stl.git", subdir = "sui", rev = "0c89008667f5800d64e68ef191f0026c9ce13fb8" }
-use_environment = "testnet"
-manifest_digest = "A3AAD8ED30FCD8C2C22818625110622FF723636ECF9C45BC9DAA4C5F84FB8B7C"
-deps = { Sui = "Sui_1" }
+[pinned.mainnet.MoveSTL]
+source = { git = "https://github.com/CetusProtocol/move-stl.git", subdir = ".", rev = "0681fec63a310ae753d03a06f7c05d3e2925bb09" }
+use_environment = "mainnet"
+manifest_digest = "E41BBD67BE8940D26C79D78B028477EF5B33BA217A1282C78ACB344CF8A5ECF6"
+deps = { std = "MoveStdlib", sui = "Sui" }
 
-[pinned.testnet.MoveStdlib]
+[pinned.mainnet.MoveStdlib]
 source = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/move-stdlib", rev = "c2428b3aaf9c24270b609001e56d96cb10c76d28" }
-use_environment = "testnet"
+use_environment = "mainnet"
 manifest_digest = "C4FE4C91DE74CBF223B2E380AE40F592177D21870DC2D7EB6227D2D694E05363"
 deps = {}
 
-[pinned.testnet.MoveStdlib_1]
-source = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/move-stdlib", rev = "9873b38d19ad29fd9ade18683677c58f8a5cccb3" }
-use_environment = "testnet"
-manifest_digest = "C4FE4C91DE74CBF223B2E380AE40F592177D21870DC2D7EB6227D2D694E05363"
-deps = {}
-
-[pinned.testnet.Sui]
+[pinned.mainnet.Sui]
 source = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "c2428b3aaf9c24270b609001e56d96cb10c76d28" }
-use_environment = "testnet"
-manifest_digest = "7AFB66695545775FBFBB2D3078ADFD084244D5002392E837FDE21D9EA1C6D01C"
+use_environment = "mainnet"
+manifest_digest = "CD547CB1ACCE0880C835DAED2D8FFCB91D56C833AE5240D3AA5B918398263195"
 deps = { MoveStdlib = "MoveStdlib" }
 
-[pinned.testnet.Sui_1]
-source = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "9873b38d19ad29fd9ade18683677c58f8a5cccb3" }
-use_environment = "testnet"
-manifest_digest = "7AFB66695545775FBFBB2D3078ADFD084244D5002392E837FDE21D9EA1C6D01C"
-deps = { MoveStdlib = "MoveStdlib_1" }
-
-[pinned.testnet.create_token_workshop]
+[pinned.mainnet.create_token_workshop]
 source = { root = true }
-use_environment = "testnet"
-manifest_digest = "E7699D673690CF0951408989F86AEDF058E4183D4330C20E06D90F8389F82CF7"
+use_environment = "mainnet"
+manifest_digest = "C5CF2C0847D1B9FE91A99AB6C41B104C349434388DCDAA139A95E88FEC83E69B"
 deps = { cetus_clmm = "CetusClmm", std = "MoveStdlib", sui = "Sui" }

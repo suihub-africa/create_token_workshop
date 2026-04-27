@@ -1,5 +1,6 @@
 
 /// Module: create_token_workshop
+#[allow(deprecated_usage)]
 module create_token_workshop::create_token_workshop;
 
 
@@ -22,6 +23,7 @@ const ICON_URL: vector<u8> = b"https://res.cloudinary.com/georgegoldman/image/up
 public struct CREATE_TOKEN_WORKSHOP  has drop{
 }
 
+#[allow(unused_function)]
 fun init(otw: CREATE_TOKEN_WORKSHOP, ctx: &mut TxContext){
 
     let (mut treasury_cap, coin_metadata) = create_currency<CREATE_TOKEN_WORKSHOP>(otw, DECIMALS, SYMBOL, NAME, DESCRIPTION, some(new_unsafe(ICON_URL.to_ascii_string())), ctx);

@@ -5,9 +5,4 @@ edition = "2024"         # edition = "legacy" to use legacy (pre-2024) Move
 # authors = ["..."]      # e.g., ["Joe Smith (joesmith@noemail.com)", "John Snow (johnsnow@noemail.com)"]
 
 [dependencies]
-cetus_clmm = { git = "https://github.com/CetusProtocol/cetus-contracts.git", subdir = "packages/cetus_clmm", rev = "testnet-v0.0.1", override = true }
-# Read more about the package management system options:
-# https://docs.sui.io/guides/developer/sui-101/move-package-management
-[addresses]
-# cetus_clmm = "0x6f5f00ed053c8466f272e50529e7019d08e5033c5e8c11438994998499834241"
-create_token_workshop = "0x4bfbf9ab1932da03bb9c547b823f47377bae1908892330ecfddd98c3e64110f7"
+cetus_clmm = { r.mvr = "@cetuspackages/clmm" }
